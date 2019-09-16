@@ -1,8 +1,4 @@
-﻿# Catlin
-
-> An interactive command line tool that helps start your next project.
-
-[![Node.js version](https://img.shields.io/node/v/catlin?style=for-the-badge)](https://nodejs.org) [![catlin](https://img.shields.io/npm/v/catlin?style=for-the-badge)](https://www.npmjs.com/package/catlin/)
+﻿[![Node.js version](https://img.shields.io/node/v/catlin?style=for-the-badge)](https://nodejs.org) [![catlin](https://img.shields.io/npm/v/catlin?style=for-the-badge)](https://www.npmjs.com/package/catlin/)
 
 ### Description
 I built Catlin to overcome the necessity of copying a boilerplate and change starter details on it every time me or my team started a new project. This simple and interactive cli-tool packs useful boilerplates which are output with dynamic values specific to each project.
