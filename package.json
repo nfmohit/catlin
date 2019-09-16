@@ -1,6 +1,6 @@
 {
 	"name": "catlin",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "An interactive command line tool that helps start your next project.",
 	"main": "./index.js",
 	"bin": {
