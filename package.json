@@ -1,0 +1,37 @@
+{
+	"name": "catlin",
+	"version": "1.0.0",
+	"description": "An interactive command line tool that helps start your next project.",
+	"main": "./index.js",
+	"bin": {
+		"catlin": "./index.js"
+	},
+	"engines": {
+		"node": ">=8.3.0"
+	},
+	"dependencies": {
+		"asciiart-logo": "^0.2.6",
+		"ejs": "^2.7.1",
+		"inquirer": "^7.0.0",
+		"simple-git": "^1.126.0",
+		"@babel/core": "^7.6.0",
+		"@babel/preset-env": "^7.6.0",
+		"@babel/register": "^7.6.0"
+	},
+	"scripts": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nfmohit-wpmudev/catlin.git"
+	},
+	"keywords": [
+		"boilerplate",
+		"template",
+		"starter"
+	],
+	"author": "Nahid Ferdous Mohit",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/nfmohit-wpmudev/catlin/issues"
+	},
+	"homepage": "https://nahid.dev/project/catlin"
+}
