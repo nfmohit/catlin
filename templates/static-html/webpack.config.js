@@ -1,5 +1,6 @@
 const path = require( 'path' );
-var ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
+const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
+const BrowserSyncPlugin = require( 'browser-sync-webpack-plugin' );
 
 module.exports = {
 	entry: './assets/src/js/main.js',
@@ -38,8 +39,13 @@ module.exports = {
 	},
 
 	plugins: [
-		new ExtractTextPlugin('../css/main.min.css', {
+		new BrowserSyncPlugin( {
+			host: 'localhost',
+			port: 3000,
+			server: { baseDir: [ './' ] }
+		} ),
+		new ExtractTextPlugin( '../css/main.min.css', {
             allChunks: true
-        })
+        } )
 	]
 };
