@@ -7,7 +7,7 @@
 	"plugins": [ "prettier" ],
 	"rules": {
 		"prettier/prettier": "error",
-		"max-len": [ "error", 80 ],
+		"max-len": [ "error", 80, { "ignoreStrings": true } ],
 		"import/no-extraneous-dependencies": [ "off" ],
 		"no-console": "off"
 	},

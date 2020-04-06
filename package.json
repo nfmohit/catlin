@@ -19,9 +19,9 @@
 		"lint": "concurrently \"npm run lint-js\" \"npm run format\"",
 		"lint:fix": "concurrently \"npm run lint-js:fix\" \"npm run format:fix\"",
 		"lint-js": "eslint \"**/*.js\"",
-		"lint--js:fix": "eslint \"**/*.js\" --fix",
-		"format": "prettier --check \"**/*.{html,json,md}\"",
-		"format:fix": "prettier --write \"**/*.{html,json,md}\""
+		"lint-js:fix": "eslint \"**/*.js\" --fix",
+		"format": "prettier --check \"**/*.{json,md}\"",
+		"format:fix": "prettier --write \"**/*.{json,md}\""
 	},
 	"repository": {
 		"type": "git",
