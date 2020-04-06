@@ -13,12 +13,16 @@
 		"asciiart-logo": "^0.2.6",
 		"ejs": "^2.7.1",
 		"inquirer": "^7.0.0",
-		"simple-git": "^1.126.0",
-		"@babel/core": "^7.6.0",
-		"@babel/preset-env": "^7.6.0",
-		"@babel/register": "^7.6.0"
+		"simple-git": "^1.126.0"
 	},
-	"scripts": {},
+	"scripts": {
+		"lint": "concurrently \"npm run lint-js\" \"npm run format\"",
+		"lint:fix": "concurrently \"npm run lint-js:fix\" \"npm run format:fix\"",
+		"lint-js": "eslint \"**/*.js\"",
+		"lint--js:fix": "eslint \"**/*.js\" --fix",
+		"format": "prettier --check \"**/*.{html,json,md}\"",
+		"format:fix": "prettier --write \"**/*.{html,json,md}\""
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/nfmohit-wpmudev/catlin.git"
@@ -33,5 +37,20 @@
 	"bugs": {
 		"url": "https://github.com/nfmohit-wpmudev/catlin/issues"
 	},
-	"homepage": "https://nahid.dev/project/catlin"
+	"homepage": "https://nahid.dev/project/catlin",
+	"devDependencies": {
+		"@babel/core": "^7.6.0",
+		"@babel/preset-env": "^7.6.0",
+		"@babel/register": "^7.6.0",
+		"@wordpress/eslint-plugin": "^4.1.0",
+		"@wordpress/prettier-config": "^0.1.0",
+		"concurrently": "^5.1.0",
+		"eslint": "^6.8.0",
+		"eslint-config-airbnb-base": "^14.1.0",
+		"eslint-config-prettier": "^6.10.1",
+		"eslint-loader": "^4.0.0",
+		"eslint-plugin-import": "^2.20.2",
+		"eslint-plugin-prettier": "^3.1.2",
+		"prettier": "npm:wp-prettier@^1.19.1"
+	}
 }
