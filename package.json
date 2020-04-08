@@ -10,13 +10,13 @@
 		"node": ">=8.3.0"
 	},
 	"dependencies": {
-		"@babel/core": "^7.6.0",
-		"@babel/preset-env": "^7.6.0",
-		"@babel/register": "^7.6.0",
+		"@babel/core": "^7.9.0",
+		"@babel/preset-env": "^7.9.5",
+		"@babel/register": "^7.9.0",
 		"asciiart-logo": "^0.2.6",
-		"ejs": "^2.7.1",
-		"inquirer": "^7.0.0",
-		"simple-git": "^1.126.0"
+		"ejs": "^2.7.4",
+		"inquirer": "^7.1.0",
+		"simple-git": "^1.132.0"
 	},
 	"scripts": {
 		"catlin": "node ./index.js",
