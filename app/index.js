@@ -1,11 +1,13 @@
 /**
  * File where the program works
+ *
+ * @author Nahid Ferdous Mohit.
+ * @since  1.0.0
  */
 
 /*
- * Import dependencies
+ * External dependencies
  */
-
 import { prompt } from 'inquirer';
 import {
 	readdirSync,
@@ -19,19 +21,21 @@ import * as ejs from 'ejs';
 import path from 'path';
 import logo from 'asciiart-logo';
 import simplegit from 'simple-git/promise';
+
+/*
+ * Internal dependencies
+ */
 import * as config from '../package.json';
 
 /*
  * Display the ascii artwork
  */
-
 console.log( logo( config ).render() );
 
 /*
  * Define variables (questions, project type
  * choices and current directory)
  */
-
 const choices = readdirSync( path.join( __dirname, '..', 'templates' ) );
 
 const currentDir = process.cwd();
@@ -82,7 +86,6 @@ const questions = [
 /*
  * Function to create the new directory
  */
-
 const createDirectoryContents = (
 	templatePath,
 	projectSlug,
@@ -129,7 +132,6 @@ const createDirectoryContents = (
 /*
  * Git initialization
  */
-
 const initializeGit = ( projectSlug, gitRepo ) => {
 	const git = simplegit( `${ currentDir }/${ projectSlug }` );
 	git.init();
@@ -142,7 +144,6 @@ const initializeGit = ( projectSlug, gitRepo ) => {
 /*
  * Run inquirer
  */
-
 prompt( questions ).then( ( answers ) => {
 	const projectChoice = answers[ 'project-choice' ];
 	const projectSlug = answers[ 'project-slug' ];
