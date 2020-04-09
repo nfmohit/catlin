@@ -26,4 +26,4 @@ require( '@babel/register' )( {
  * Call the source index file where the program works
  */
 
-module.exports = require( './src/index.js' );
+module.exports = require( './app/index.js' );
