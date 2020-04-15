@@ -7,10 +7,15 @@
 	"plugins": [ "import", "prettier" ],
 	"rules": {
 		"prettier/prettier": "error",
-		"max-len": [ "error", 80, { "ignoreStrings": true } ],
+		"max-len": [
+			"error",
+			80,
+			{ "ignoreStrings": true, "ignoreTemplateLiterals": true }
+		],
 		"import/no-extraneous-dependencies": [ "off" ],
 		"no-console": "off",
-		"import/prefer-default-export": "off"
+		"import/prefer-default-export": "off",
+		"radix": [ "error", "as-needed" ]
 	},
 	"env": {
 		"node": true
