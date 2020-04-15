@@ -18,6 +18,7 @@
 		"commander": "^5.0.0",
 		"ejs": "^2.7.4",
 		"inquirer": "^7.1.0",
+		"progress": "^2.0.3",
 		"simple-git": "^1.132.0"
 	},
 	"scripts": {

@@ -6,3 +6,4 @@
  */
 
 export { verifyBoilerplate } from './verify-boilerplate';
+export { downloadBoilerplate } from './download-boilerplate';
