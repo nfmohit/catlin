@@ -28,7 +28,7 @@ const verifyBoilerplate = async ( boilerplate, responseType = 'boolean' ) => {
 			return data;
 		}
 		if ( responseType === 'summary' ) {
-			return `Success Message: ${ data.statusText }
+			return `Success Status: ${ data.statusText }
 Success Code: ${ data.status }`;
 		}
 		return true;
@@ -37,7 +37,7 @@ Success Code: ${ data.status }`;
 			return error;
 		}
 		if ( responseType === 'summary' ) {
-			return `Error Message: ${ error.response.statusText }
+			return `Error Status: ${ error.response.statusText }
 Error Code: ${ error.response.status }`;
 		}
 		return false;
