@@ -25,7 +25,7 @@ const Use = async ( boilerplate ) => {
 	const isBoilerplateVerified = await verifyBoilerplate( boilerplate );
 	if ( isBoilerplateVerified ) {
 		console.log( `${ boilerplate } found!` );
-		downloadBoilerplate( boilerplate );
+		await downloadBoilerplate( boilerplate );
 	} else {
 		console.log( `We couldn't find ${ boilerplate }!` );
 	}
