@@ -13,11 +13,17 @@ import logo from 'asciiart-logo';
 /*
  * Internal dependencies
  */
-import * as config from '../../../package.json';
-import { verifyBoilerplate, downloadBoilerplate, readConfig } from './utils';
+import * as packageInfo from '../../../package.json';
+import {
+	verifyBoilerplate,
+	downloadBoilerplate,
+	readConfig,
+	getQuestions,
+	askQuestions
+} from './utils';
 
 const Use = async ( boilerplate ) => {
-	console.log( logo( config ).render() );
+	console.log( logo( packageInfo ).render() );
 
 	/*
 	 * Verify the boilerplate
@@ -26,7 +32,9 @@ const Use = async ( boilerplate ) => {
 	if ( isBoilerplateVerified ) {
 		console.log( `${ boilerplate } found!` );
 		const download = await downloadBoilerplate( boilerplate );
-		console.log( await readConfig( boilerplate, download ) );
+		const config = await readConfig( boilerplate, download );
+		const questions = getQuestions( config.questions );
+		askQuestions( questions );
 	} else {
 		console.log( `We couldn't find ${ boilerplate }!` );
 	}
