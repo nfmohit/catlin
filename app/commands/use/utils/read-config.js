@@ -10,19 +10,17 @@
  */
 import JSZip from 'jszip';
 
-const readConfig = ( boilerplate, download ) => {
-	JSZip.loadAsync( download ).then(
-		( zip ) => {
-			zip.file( `${ boilerplate }/.catlin.json` )
-				.async( 'string' )
-				.then( ( config ) => {
-					return config;
-				} );
-		},
-		function( error ) {
-			return error.message;
-		}
-	);
+const readConfig = async ( boilerplate, download ) => {
+	try {
+		const zip = await JSZip.loadAsync( download );
+		const config = await zip
+			.file( `${ boilerplate }/.catlin.json` )
+			.async( 'string' );
+
+		return config;
+	} catch ( error ) {
+		return error;
+	}
 };
 
 export { readConfig };

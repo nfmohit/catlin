@@ -14,12 +14,7 @@ import logo from 'asciiart-logo';
  * Internal dependencies
  */
 import * as config from '../../../package.json';
-import {
-	verifyBoilerplate,
-	downloadBoilerplate,
-	readConfig,
-	writeBoilerplate
-} from './utils';
+import { verifyBoilerplate, downloadBoilerplate, readConfig } from './utils';
 
 const Use = async ( boilerplate ) => {
 	console.log( logo( config ).render() );
@@ -31,8 +26,7 @@ const Use = async ( boilerplate ) => {
 	if ( isBoilerplateVerified ) {
 		console.log( `${ boilerplate } found!` );
 		const download = await downloadBoilerplate( boilerplate );
-		readConfig( boilerplate, download );
-		writeBoilerplate( boilerplate, download );
+		console.log( await readConfig( boilerplate, download ) );
 	} else {
 		console.log( `We couldn't find ${ boilerplate }!` );
 	}
