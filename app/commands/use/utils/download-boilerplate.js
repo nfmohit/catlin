@@ -14,6 +14,8 @@ import axios from 'axios';
  * Downloads a boilerplate
  *
  * @param {string} boilerplate - Slug of the boilerplate.
+ *
+ * @returns {buffer} A buffer containing the downloaded zip file.
  */
 const downloadBoilerplate = async ( boilerplate ) => {
 	try {

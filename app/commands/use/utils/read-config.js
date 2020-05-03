@@ -10,6 +10,14 @@
  */
 import JSZip from 'jszip';
 
+/*
+ * Reads the configuration of a boilerplate
+ *
+ * @param {string} boilerplate - Slug of the boilerplate.
+ * @param {buffer} download - The downloaded buffer.
+ *
+ * @returns {object} An object containing the boilerplate configuration.
+ */
 const readConfig = async ( boilerplate, download ) => {
 	try {
 		const zip = await JSZip.loadAsync( download );
