@@ -10,6 +10,16 @@
  */
 import fs from 'fs';
 
+/*
+ * Gets the questions to ask for initialization
+ * Contains default questions and adds question off the boilerplate
+ * configuration
+ *
+ * @param {object} boilerplateQuestions - Object containing questions
+ * from the boilerplate configuration.
+ *
+ * @returns {object} An object containing questions.
+ */
 const getQuestions = ( boilerplateQuestions ) => {
 	const getBoilerplateQuestions = () => {
 		if ( ! boilerplateQuestions === undefined ) {
@@ -23,7 +33,7 @@ const getQuestions = ( boilerplateQuestions ) => {
 
 	const questions = [
 		{
-			name: 'project-slug',
+			name: 'projectSlug',
 			type: 'input',
 			message: 'Project Slug:',
 			validate( input ) {
@@ -37,22 +47,22 @@ const getQuestions = ( boilerplateQuestions ) => {
 			}
 		},
 		{
-			name: 'project-name',
+			name: 'projectName',
 			type: 'input',
 			message: 'Project Name:'
 		},
 		{
-			name: 'project-description',
+			name: 'projectDescription',
 			type: 'input',
 			message: 'Project Description:'
 		},
 		{
-			name: 'project-author',
+			name: 'projectAuthor',
 			type: 'input',
 			message: 'Project Author:'
 		},
 		{
-			name: 'git-repository',
+			name: 'gitRepository',
 			type: 'input',
 			message: 'Enter Git Repository URL:'
 		},
