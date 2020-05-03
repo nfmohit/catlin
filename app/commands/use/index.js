@@ -19,7 +19,8 @@ import {
 	downloadBoilerplate,
 	readConfig,
 	getQuestions,
-	askQuestions
+	getAnswers,
+	writeBoilerplate
 } from './utils';
 
 const Use = async ( boilerplate ) => {
@@ -34,7 +35,8 @@ const Use = async ( boilerplate ) => {
 		const download = await downloadBoilerplate( boilerplate );
 		const config = await readConfig( boilerplate, download );
 		const questions = getQuestions( config.questions );
-		askQuestions( questions );
+		const answers = await getAnswers( questions );
+		await writeBoilerplate( boilerplate, download, answers, questions );
 	} else {
 		console.log( `We couldn't find ${ boilerplate }!` );
 	}
