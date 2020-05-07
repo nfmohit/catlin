@@ -1,6 +1,6 @@
 {
 	"name": "catlin",
-	"version": "1.0.2",
+	"version": "2.0.0",
 	"description": "An interactive command line tool that helps start your next project.",
 	"main": "./index.js",
 	"bin": {
@@ -9,6 +9,10 @@
 	"engines": {
 		"node": ">=8.3.0"
 	},
+	"files": [
+		"index.js",
+		"dist"
+	],
 	"dependencies": {
 		"asciiart-logo": "^0.2.6",
 		"axios": "^0.19.2",
@@ -20,7 +24,7 @@
 		"simple-git": "^1.132.0"
 	},
 	"scripts": {
-		"prepublish": "npm run build",
+		"prepublishOnly": "npm run build",
 		"build": "babel src -d dist",
 		"catlin": "node ./index.js",
 		"lint": "concurrently \"npm run lint-js\" \"npm run format\"",
