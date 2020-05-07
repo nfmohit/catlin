@@ -2,28 +2,20 @@
 
 /**
  * The core program file
+ *
+ * @author Nahid Ferdous Mohit.
+ * @since  1.0.0
  */
 
 /*
- * Babel configuration
+ * External dependencies
  */
 
-require( '@babel/register' )( {
-	presets: [
-		[
-			require.resolve( '@babel/preset-env' ),
-			{
-				targets: {
-					node: 'current'
-				}
-			}
-		]
-	],
-	ignore: [ '/node_modules/(?!catlin)/' ]
-} );
+/* For better ES6 support */
+require( 'core-js/stable' );
+require( 'regenerator-runtime/runtime' );
 
 /*
  * Call the source index file where the program works
  */
-
-module.exports = require( './src/index.js' );
+module.exports = require( './dist/index.js' );
