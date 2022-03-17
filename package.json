@@ -16,7 +16,7 @@
 		"asciiart-logo": "^0.2.6",
 		"ejs": "^2.7.4",
 		"inquirer": "^7.1.0",
-		"simple-git": "^1.132.0"
+		"simple-git": "^3.3.0"
 	},
 	"scripts": {
 		"catlin": "node ./index.js",
